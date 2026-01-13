@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box {
+            width: 80px;
+            height: 80px;
+            justify-items: center;
+            align-items: center;
+            background-color: rgb(248, 235, 59);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(2, 100px);
+            gap: 10px;
+            width: fit-content;
+            height: fit-content;
+            background-color: cadetblue;
+        }
+    </style>
+    <title>격자 레이아웃</title>
+</head>
+<body>
+    <div class="box container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+</body>
+</html>

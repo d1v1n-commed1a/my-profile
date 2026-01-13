@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>basic of CSS</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        .Montserrat {
+            font-family: "Montserrat", sans-serif;
+        }
         body{
             height: 2000px; /* 스크롤 테스트용 */
         }
@@ -33,7 +37,7 @@
         }
         /*백그라운드 컬러*/
         .bg-color{
-            width: 100px;
+            width: 100vh;
             height: 100px;
             background-color: rgb(230, 167, 167);
         }
@@ -75,6 +79,7 @@
         li::after{
             content: "💫";
         }
+        
     </style>
 </head>
 <body>
@@ -86,6 +91,7 @@
     <p>font-family</p>
     <p class="italic">italic</p>
     <p class="oblique">oblique</p>
+    <p class="Montserrat">kdkd</p>
     <ul style="list-style-type: square;">
         <li>하나</li>
         <li>둘</li>
