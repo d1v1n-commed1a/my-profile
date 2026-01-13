@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Practice</title>
+
+    <style>
+        /* 기본 스타일 */
+        body {
+            height: 2000px; /* 스크롤 확인용 */
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: rgb(32, 76, 137);
+        }
+
+        /* 공통 박스 스타일 */
+        .box {
+            width: 120px;
+            height: 120px;
+            color: white;
+            text-align: center;
+            line-height: 120px;
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        /* 1. static (기본값) */
+        .static {
+            position: static;
+            background-color: gray;
+        }
+
+        /* 2. relative */
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background-color: blue;
+        }
+
+        /* 3. absolute (relative 기준) */
+        .container {
+            position: relative;
+            width: 400px;
+            height: 250px;
+            border: 2px dashed black;
+            background-color: rgb(199, 199, 199);
+            margin: 40px;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            background-color: red;
+        }
+
+        /* 4. fixed */
+        .fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: green;
+        }
+
+        /* 5. sticky */
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Position Practice</h1>
+
+    <!-- static -->
+    <div class="box static">static</div>
+
+    <!-- relative -->
+    <div class="box relative">relative</div>
+
+    <!-- absolute -->
+    <div class="container">
+        기준 박스 (relative)
+        <div class="box absolute">absolute</div>
+    </div>
+
+    <!-- sticky -->
+    <div class="box sticky">sticky</div>
+
+    <p>스크롤을 내려보세요 👇</p>
+
+    <!-- fixed -->
+    <div class="box fixed">fixed</div>
+
+</body>
+</html>

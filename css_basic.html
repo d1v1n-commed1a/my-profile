@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic of CSS</title>
+    <style>
+        body{
+            height: 2000px; /* 스크롤 테스트용 */
+        }
+        /*내부 스타일 */
+        h1{
+            font-size: 24px;
+            color:rgb(32, 76, 137);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        /* 텍스트 속성*/
+        /*italic:디자인된 기울임 / oblique:강제된 기울임*/
+        p{
+            font-family: BatangChe,"Times New Roman", serif;
+        }
+        .italic{
+            font-style: italic;
+        }
+        .oblique{
+            font-style: oblique;
+        }
+        .box{
+            border: 1px solid black;
+            line-height: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        /*백그라운드 컬러*/
+        .bg-color{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(230, 167, 167);
+        }
+        /*백그라운드 이미지 적용*/
+        .bg-profile{
+            width: 160px;
+            height: 160px;
+            background-image: url('media/profile.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        /*삽입하려는 이미지의 위치*/
+        .bg-nz{
+            width: 320px;
+            height: 320px;
+            border: 1px solid black;
+            background-image: url('media/newzealand.jpg');
+            background-repeat: no-repeat;
+            background-position: 100%;
+        }
+        .static{
+            position: static;
+        }
+        .sticky{
+            position: sticky;
+            top: 200px;
+            left: 20px;
+        }
+        .absolute{
+            position: absolute;
+            top: 600px;
+            left: 30px;
+        }
+        /*가상 선택자*/
+        li::before{
+            content: "💫";
+        }
+        li::after{
+            content: "💫";
+        }
+    </style>
+</head>
+<body>
+    <!--내부 스타일 적용-->
+    <h1>CSS basic</h1>
+    <!--인라인 스타일-->
+    <h2 style="color:rgb(95, 161, 255);font-size: 10px;">인라인 스타일</h2>
+    <!--텍스트 속성-->
+    <p>font-family</p>
+    <p class="italic">italic</p>
+    <p class="oblique">oblique</p>
+    <ul style="list-style-type: square;">
+        <li>하나</li>
+        <li>둘</li>
+        <li>셋</li>
+    </ul>
+    <div class="box bg-color static">static</div>
+    <br>
+    <div class="box bg-profile sticky">sticky</div>
+    <div class="box bg-nz absolute">absolute</div>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@bb_a.ng33's profile</title>
+</head>
+
+    <!--CSS 최소화-->
+    <style>
+      *{box-sizing: border-box;}
+        body{
+          font-family: system-ui, sans-serif;
+          line-height: 1.6;
+          margin: 0px;
+        }
+        .page-container{
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 16px;
+        }
+        .layout{
+          display: grid;
+          grid-template-areas:
+            "header header"
+            "sidebar content"
+            "footer footer";
+          grid-template-columns: 220px 1fr;
+          grid-template-rows: 60px 1fr 50px;
+          height: 100vh;
+        }
+        header{
+          grid-area: header;
+          background: #ffacdb;
+          color: rgb(55, 49, 49);
+          display: flex;               /* Flexbox */
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 20px;
+        }
+        aside{
+          grid-area: sidebar;
+          background: #ecf0f1;
+          display: flex;               /* Flexbox */
+          flex-direction: column;
+          gap: 10px;
+          padding:20px;
+          font-size: 14px;
+        }
+        aside audio{
+          width: calc(100%+10%);
+          max-width: 110%;
+          margin-left: -15px;
+          display: block;
+        }
+        aside p{ margin: 6px 0; }
+        aside ul{ margin: 2px 0 0; padding-left: 22px; }
+        .absolute{
+            position: absolute;
+            top: 8px;
+            right: 20px;
+        }
+        main{
+          max-width: 920px;
+          position: relative;
+          padding: 20px;
+          padding-top: 0px;
+          font-size: 90%;
+        }
+        .profile-img{
+          width: 100%;
+          max-width: 220px;
+          aspect-ratio: 1 / 1;
+          border-radius: 15px;
+          background-image: url("media/profile.png");
+          background-size: cover;
+          background-position: center;
+          transition: background-image 0.25s ease;
+          cursor: pointer;
+        }
+        .profile-img:hover{
+          background-image: url("media/profile_hover.png");
+        }
+        table{
+          border-collapse: collapse;
+          width: 100%;
+        }
+        th,td{
+          border: 1px solid #dddddd;
+          padding: 10px;
+          text-align: left;
+        }
+        .sticky{
+          position: sticky;
+          top: 20px;
+        }
+        footer{
+          grid-area: footer;
+          background: #2c3e50;
+          color: rgb(230, 206, 206);
+          display: flex;               /* Flexbox */
+          align-items: center;
+          justify-content: center;
+        }
+        .container {
+          position: relative;
+          border: 1.9px dashed rgb(180, 171, 171);
+          background-color: #f8f9fa;
+          margin: 2px;
+        }
+        .relative {
+          position: relative;
+          top: 0px;
+          left: 0px;
+          margin: 20px;
+        }
+        .easter-egg{
+          position: sticky;
+          top: 230px;
+          margin-left: auto;
+          width: 125px;
+          font-size: 12px;
+          padding: 8px 10px;
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 0.85);
+          border: 1px dashed #bbb;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+          backdrop-filter: blur(6px);
+        }
+        @media (max-width: 480px){
+          :root{ size:30%; }
+          body{ font-size: 14px; }
+          header h2{ font-size: 18px; }
+          aside{ padding: 12px; }
+          main{ padding: 12px; }
+
+          /* 프로필 이미지가 너무 커 보이면 최대폭 조금 줄이기 */
+          .profile-img{ max-width: 180px; }
+        }
+    </style>
+
+<body>
+  <div class="layout">
+
+    <header>
+      <strong><h2>👰Dawon's profile</h2></strong>
+      <p><small>📍 [skala ai 3기] 프로그래밍 기초 2일차 최종 실습 페이지</small></p>
+    </header>
+
+    <aside>
+      <div class="sticky">
+        <div class="profile-img"></div>
+        <figcaption class="meta" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">/ <strong>Dawon Bang 03</strong></figcaption>
+        <p><small>🎵bgm for my profile viewer🎵</small></p>
+            <audio controls>
+              <source src="media/bgm.mp3" type="audio/mpeg" />
+              브라우저가 오디오 태그를 지원하지 않습니다.
+            </audio>
+        <p>🔗HyperLink🔗</p>
+        <ul style="list-style-type: square;">
+          <li><a href="#Basic-information">Basic Information</a></li>
+          <li><a href="#About-me">About me</a></li>
+          <li><a href="#My-Career">My Career</a></li>
+          <li><a href="#Link">Link</a></li>
+          <li><a href="#Feedback">Feedback</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main>
+      <div class="easter-egg">click the profile image!</div>
+      <div class="absolute">
+        <p>
+          <label for="Search">🔎<strong>Search</strong></label><br>
+          <textarea id="Search" name="Search" rows="1" placeholder="페이지 내 검색"></textarea>
+        </p>
+      </div>
+      <section aria-labelledby="intro-title">
+        <h2 id="intro-title" style="font-size: 25px;">방다원을 소개합니다<small>‼️</small></h2><hr>
+        <article>
+          <a name="Basic-information"></a>
+          <h2>📌 Basic Information</h2>
+          
+          <p style="margin-left: 40px;">
+            이름: 방다원<br />
+            나이: 24세<br />
+            전공: 에너지공학과<br />
+            <br>
+            🎤 한 줄 소개: 모험을 좋아하는 탐험가
+          </p>
+        </article>
+      </section>
+
+      <section aria-labelledby="list-title">
+        <a name="About-me"></a>
+        <h2 id="list-title">📌 About me</h2>
+        <article style="margin-left: 40px;">
+          <h3>My favorite</h3>
+          <ul style="list-style-type: square;">
+            <li>공기 좋은 곳에서 산책하며 <u>풍경 사진</u> 찍기📷</li>
+            <li>반려견과 <span style="color:rgb(6, 134, 81);">남한강 산책로</span> 뛰기🐕</li>
+            <li>Netflex 보면서 <mark>뜨개질</mark>하기🧶</li>
+            <li>
+              <p>좋아하는 노래🎶</p>
+              <!--video 태그를 대체-->
+              <iframe
+              width="480"
+              height="270"
+              src="https://www.youtube.com/embed/Oeaq91B0Un0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+              </iframe>
+            </li>
+          </ul>
+          <h3>My 2026 Goals</h3>
+          <ol type="A">
+            <li>SKALA 무사히 수료하기</li>
+            <li>몽골 여행가서 사막/초원에서 밤하늘 바라보기</li>
+            <li>멋진 회사에 무사히 취업하기</li>
+          </ol>
+        </article>
+      </section>
+
+      <section aria-labelledby="table-title">
+        <a name="My-Career"></a>
+        <h2 id="table-title">📌 My Career</h2>
+        <article style="margin-left: 40px;">
+          <h3>📋list</h3>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">구분</th>
+                <th scope="col">기간</th>
+                <th scope="col">내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">학부생 인턴</th>
+                <td>2024.05-2024.10</td>
+                <td>한양대 NDPL 연구실 CMP팀 인턴</td>
+              </tr>
+              <tr>
+                <th scope="row">현장실습 인턴</th>
+                <td>2024.12-2025.06</td>
+                <td>KIST 수소에너지소재연구단 SSEMS 연구실 EM 분석팀 인턴</td>
+              </tr>
+              <tr>
+                <th scope="row">프로젝트</th>
+                <td>2025.04-ing</td>
+                <td>SEM 기반 PM2.5 역추적 모델링</td>
+              </tr>
+              <tr>
+                <th scope="row">프로젝트</th>
+                <td>2025.11-2025.12</td>
+                <td>CMP defect 원인분석 자동화 모델링</td>
+              </tr>
+              <tr>
+                <th scope="row">부트캠프</th>
+                <td>2026.01-ing</td>
+                <td>SK AX SKALA AI 3기</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+
+      <section aria-labelledby="link-title">
+        <a name="Link"></a>
+        <h2 id="link-title">📌 Link</h2>
+        <article style="margin-left: 40px;">
+          <h3>🔗list</h3>
+          <ul style="list-style-type: square;">
+            <li><a href="https://blog.naver.com/dawon9203" target="_blank" rel="noopener">Blog</a></li>
+            <li><a href="https://github.com/d1v1n-commed1a" target="_blank" rel="noopener">Github</a></li>
+          </ul>
+        </article>
+        <br>
+      </section>
+
+      <hr>
+
+      <section aria-labelledby="form-title">
+        <a name="Feedback"></a>
+        <h2 id="form-title">Feedback for my profile</h2>
+
+        <article>
+          <div class="container">
+            <div class="relative">
+              <h3>✏️ Form</h3>
+              <form action="#" method="post">
+                <p>
+                  <label for="name">이름</label><br />
+                  <input id="name" name="name" type="text" placeholder="예: 김철수" />
+                </p>
+
+                <p>
+                  <label for="email">이메일</label><br />
+                  <input id="email" name="email" type="email" placeholder="예: example@email.com" />
+                </p>
+
+                <p>
+                  <label for="message">메시지</label><br />
+                  <textarea id="message" name="message" rows="4" placeholder="피드백을 입력하세요."></textarea>
+                </p>
+
+                <button type="submit">제출</button>
+              </form>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <small>© 2026 Bang Dawon.</small>
+    </footer>
+  </div>
+
+</body>
+</html>

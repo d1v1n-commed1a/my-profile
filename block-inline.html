@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블록-인라인 스타일 변형</title>
+    <style>
+        .block {
+            border: 2px solid blue;
+            background-color: lightblue;
+            padding: 5px;
+            margin: 10px 0;
+        }
+        .inline {
+            display: inline-block;
+            border: 2px solid green;
+            background-color: lightgreen;
+            padding: 10px;
+            margin-right: 5px;
+            margin: 20px;
+        }
+        .container {
+            position: relative;
+            border: 2px dashed black;
+            margin: 20px;
+        }
+        .relative {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3>블록 요소 기본 스타일</h3>
+    <div class="container">
+        <div class="block relative">블록 스타일 div 1</div>
+        <div class="block relative">블록 스타일 div 2</div>
+    </div>
+
+    <h3>인라인 스타일로 변경한 div</h3>
+    <div class="container">
+        <div class="inline">인라인 스타일 div 1</div>
+        <div class="inline">인라인 스타일 div 2</div>
+    </div>
+</body>
+</html>

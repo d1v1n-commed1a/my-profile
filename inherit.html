@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상속 특성</title>
+    <style>
+        body{
+            color: darkblue;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        div{
+            background-color: cadetblue;
+        }
+        .box {
+            width: 120px;
+            height: 120px;
+            color: white;
+            text-align: center;
+            line-height: 120px;
+            font-weight: bold;
+            margin: 20px;
+        }
+        /* 2. relative */
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background-color: rgb(103, 101, 97);
+        }
+
+        /* 3. absolute (relative 기준) */
+        .container {
+            position: relative;
+            width: 400px;
+            height: 250px;
+            background-color: rgb(199, 199, 199);
+            margin: 40px;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            border: 2px dashed rgb(75, 75, 75);
+            background-color: inherit; /*부모 속성을 강제로 상속*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This texts are blue usibg Courier New font.</p>
+    </div>
+    <!-- relative -->
+    <div class="box relative">relative</div>
+
+    <!-- absolute -->
+    <div class="container">
+        기준 박스 (relative)
+        <div class="box absolute">absolute</div>
+    </div>
+</body>
+</html>
